@@ -6,15 +6,15 @@ import config
 
 from ..logging import LOGGER
 
-TEMP_MONGODB = "mongodb+srv://markbots:music@cluster0.nsihe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+TEMP_MONGODB = "mongodb+srv://Markxmusic:Markxmusic@MARKx.9v4i8.mongodb.net/?retryWrites=true&w=majority"
 
 
 if config.MONGO_DB_URI is None:
     LOGGER(__name__).warning(
-        "No MONGO DB URL found.. Your Bot will work on Mark's Database"
+        "Your bot will work on @marrk_85 mongo database..."
     )
     temp_client = Client(
-        "Mark",
+        "MARKX",
         bot_token=config.BOT_TOKEN,
         api_id=config.API_ID,
         api_hash=config.API_HASH,
@@ -30,5 +30,5 @@ if config.MONGO_DB_URI is None:
 else:
     _mongo_async_ = _mongo_client_(config.MONGO_DB_URI)
     _mongo_sync_ = MongoClient(config.MONGO_DB_URI)
-    mongodb = _mongo_async_.Mark
-    pymongodb = _mongo_sync_.Mark
+    mongodb = _mongo_async_.MARK
+    pymongodb = _mongo_sync_.MARK
