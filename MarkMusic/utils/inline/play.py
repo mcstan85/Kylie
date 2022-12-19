@@ -18,6 +18,8 @@ selections = [
     "▃▅▂▅▃▇▄▅▃",
 ]
 
+## After Edits with Timer Bar
+
 def time_to_sec(time: str):
     x = time.split(":")
 
@@ -165,6 +167,7 @@ def telegram_markup(_, chat_id):
     ]
     return buttons
 
+## Search Query Inline
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -209,6 +212,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     ]
     return buttons
 
+## Live Stream Markup
 
 def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
@@ -225,6 +229,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     ]
     return buttons
 
+## Slider Query Markup
 
 def slider_markup(
     _, videoid, user_id, query, query_type, channel, fplay
