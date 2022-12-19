@@ -6,7 +6,7 @@ from MarkMusic.plugins.markbots.spotify import getsp_categories, getsp_categorie
 from MarkMusic import app, Spotify
 import pyrogram
 from pyrogram import filters
-from MarkMusic.plugins.techzbots.strings import *
+from MarkMusic.plugins.markbots.strings import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
