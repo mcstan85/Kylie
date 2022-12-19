@@ -1,4 +1,4 @@
-from MarkMusic.plugins.techzbots.database.limitsdb import is_approved
+from MarkMusic.plugins.markbots.database.limitsdb import is_approved
 import os
 from random import randint
 
