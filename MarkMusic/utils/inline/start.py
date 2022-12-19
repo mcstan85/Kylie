@@ -3,7 +3,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
 from config import GITHUB_REPO
-from YukkiMusic import app
+from MarkMusic import app
 
 
 def start_pannel(_):
