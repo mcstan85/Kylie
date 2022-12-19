@@ -2,7 +2,7 @@ from config import START_IMG_URL as THUMBNAIL
 from MarkMusic import app
 from MarkMusic.misc import SUDOERS
 from pyrogram import filters
-from MarkMusic.plugins.techzbots.strings import *
+from MarkMusic.plugins.markbots.strings import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 async def start_menu_private(message):
