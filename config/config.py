@@ -14,9 +14,9 @@ API_HASH = getenv("API_HASH")
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
+# Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/marrkmusic")
-
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", "https://t.me/craxymarrk")
 
