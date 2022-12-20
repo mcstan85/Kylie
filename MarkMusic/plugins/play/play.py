@@ -393,7 +393,7 @@ async def play_commnd(
                 duration_sec = time_to_seconds(
                     details["duration_min"]
                 )
-                if not await is_approved(user_id):
+                if not await is_approved(user_id): 
                     if duration_sec > config.DURATION_LIMIT:
                         return await mystic.edit_text(
                             _["play_6"].format(
