@@ -7,7 +7,8 @@ from MarkMusic import app
 from MarkMusic.utils.database import (get_playmode, get_playtype,
                                        is_nonadmin_chat)
 from MarkMusic.utils.decorators import language
-from MarkMusic.utils.inline.settings import playmode_users_Markup
+from MarkMusic.utils.inline.settings import playmode_users_markup
+
 
 ### Commands
 PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")
