@@ -1,4 +1,4 @@
-## Yukki Assets Folder
+## Mark Assets Folder
 
 # Contains all the fonts and thumb related files.
 
