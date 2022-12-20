@@ -118,7 +118,6 @@ def PlayWrapper(command):
             message,
             _,
             chat_id,
-            user_id,
             video,
             channel,
             playmode,
