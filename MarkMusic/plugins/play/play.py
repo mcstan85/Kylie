@@ -22,7 +22,7 @@ from MarkMusic.utils.formatters import formats
 from MarkMusic.utils.inline.play import (livestream_markup,
                                           playlist_markup,
                                           slider_markup, track_markup)
-from MarkMusic.utils.inline.playlist import botplaylist_Markup
+from MarkMusic.utils.inline.playlist import botplaylist_markup
 from MarkMusic.utils.logger import play_logs
 from MarkMusic.utils.stream.stream import stream
 
