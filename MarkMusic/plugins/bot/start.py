@@ -1,4 +1,5 @@
 import asyncio
+
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
@@ -47,7 +48,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                "🔎 ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴩᴇʀsᴏɴᴀʟ sᴛᴀᴛs ғʀᴏᴍ {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
+                f"🥱 ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴩᴇʀsᴏɴᴀʟ sᴛᴀᴛs ғʀᴏᴍ {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -83,7 +84,7 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/telegram) ** played {count} times**\n\n"
+                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/CRAXYMARRK) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                     else:
                         msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
@@ -107,7 +108,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>SUDOLIST</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -118,12 +119,12 @@ async def start_comm(client, message: Message, _):
                 return await Telegram.send_split_text(message, lyrics)
             else:
                 return await message.reply_text(
-                    "Failed to get lyrics."
+                    "ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ʟʏʀɪᴄs."
                 )
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🔎")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -139,18 +140,18 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+😲**ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ**😲
 
-❇️**Title:** {title}
+📌 **ᴛɪᴛʟᴇ:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳ **ᴅᴜʀᴀᴛɪᴏɴ:** {duration} ᴍɪɴᴜᴛᴇs
+👀 **ᴠɪᴇᴡs:** `{views}`
+⏰ **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
+🎥 **ᴄʜᴀɴɴᴇʟ:** {channel}
+📎 **ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+🔗 **ʟɪɴᴋ:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -210,7 +211,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} ʜᴀꜱ ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
             )
 
 
@@ -265,7 +266,7 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(chat_id)
                 userbot = await get_assistant(message.chat.id)
                 OWNER = OWNER_ID[0]
-                out = start_pannel(_)
+                out = start_pannel(_, app.username, OWNER)
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_3"].format(
