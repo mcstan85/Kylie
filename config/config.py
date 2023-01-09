@@ -16,16 +16,16 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/marrkmusic")
+    "SUPPORT_CHANNEL", "https://t.me/bawara_mannn")
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/craxymarrk")
+    "SUPPORT_GROUP", "https://t.me/akkkasimp")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "180")
+    getenv("DURATION_LIMIT", "380")
 )  # Remember to give value in Minutes
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
@@ -132,7 +132,7 @@ STRING5 = getenv("STRING_SESSION5", None)
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
 LOG = 2
-LOG_FILE_NAME = "Yukkilogs.txt"
+LOG_FILE_NAME = "Marklogs.txt"
 adminlist = {}
 lyrical = {}
 chatstats = {}
@@ -143,7 +143,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/ed185fc4a0884f490844a.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/b2ecd1f9a3d428683c4b9.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
